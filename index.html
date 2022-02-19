@@ -9,17 +9,25 @@
 </head>
 <body>
 
-	<h1>Změna tříd, události</h1>
+	<h1 onclick="zmenStyl()">Změna tříd, události</h1>
 
-	<div class="ctverecek zluty"></div>
+	<h2 class="odstavec" onmouseover="ztucni()" && onmouseout="odtucni()">V elipse spi lev</h2>
 
-	<div class="ctverecek zeleny"></div>
+	
+	<button id="cervene" onclick="poKliknutiCerveny()" class="tlacitko">Červeny po kliknuti</button>
+	<button onclick="poKliknutiVetsi()" class="tlacitko">Větší po kliknutí</button>
+	<p></p>
+	
+	<button onclick="prehraj()" class="tlacitko" >přehraj</button>
+	<button onclick="min()" class="tlacitko" >minimální hlasitost</button>
+	<button onclick="stred()" class="tlacitko" >střední hlasitost</button>
+	<button onclick="max()" class="tlacitko" >maximální hlasitost</button>
+	<button onclick="zastav()" class="tlacitko">zastav</button>
+	<button onclick="vratSe()" class="tlacitko">vrať na začátek skladby</button>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
+	<audio id="zvukovaStopa" src="audio/dingdingdang.mp3" preload="auto"></audio>
 
-	<button class="tlacitko">Čudlajs</button>
-
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+	<script src="main.js"></script>
 
 </body>
 </html>
