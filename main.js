@@ -17,8 +17,6 @@ let odstavec = document.querySelector(".odstavec");
     let ctverecek = document.querySelector("div.zluty");
 
 }
-*/
-
 /*tlacitko = console.log("test" + pocitadlo);
     pocitadlo++; */
 
@@ -32,20 +30,21 @@ function ztucni() {
         odstavec.style.fontWeight = "normal";   
   }
 
-function poKliknutiCerveny(){
+function poKliknutiCerveny()  {
 
     let tlacitkoCervene = document.getElementById("cervene");
   
     tlacitkoCervene.style.backgroundColor = "red";
 }
 
-function poKliknutiVetsi () {
-
+function poKliknutiVetsi() {
+    let velikost1 = 11;
+    let velikost2 = 21;
     let tlacitkoVetsi = document.getElementById("poKliknutiVetsi");
-    tlacitkoVetsi.style.width = "40px";
-    tlacitkoVetsi.style.height = "40px";
-  
-  }
+    tlacitkoVetsi.style.padding = velikost1 + "px" + velikost2 + "px";
+    velikost1++;
+    velikost2++;
+}
   
 
 function prehraj() {
