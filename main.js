@@ -1,4 +1,4 @@
-// tady je místo pro náš program
+
 
 
 let nadpis = document.querySelector("h1");
@@ -32,56 +32,56 @@ function ztucni() {
 
 function poKliknutiCerveny()  {
 
-    let tlacitkoCervene = document.getElementById("cervene");
-  
-    tlacitkoCervene.style.backgroundColor = "red";
+    // let tlacitkoCervene = document.getElementById("text");
+    let tlacitkoCervene = document.querySelector(".odstavec");
+    tlacitkoCervene.classList.toggle("cervenyText");
 }
 
+let velikostTextu = getComputedStyle(document.querySelector(".odstavec")).fontSize;
+console.log(velikostTextu);
+
+let velikost = 27;
+
 function poKliknutiVetsi() {
-    let velikost1 = 11;
-    let velikost2 = 21;
-    let tlacitkoVetsi = document.getElementById("poKliknutiVetsi");
-    tlacitkoVetsi.style.padding = velikost1 + "px" + velikost2 + "px";
-    velikost1++;
-    velikost2++;
+    
+   // let tlacitkoVetsi = document.getElementById("text");
+    let tlacitkoVetsi = document.querySelector(".odstavec");
+    tlacitkoVetsi.style.fontSize = velikost + "px";
+    velikost++;
+    
 }
-  
+
+let audioFile = document.getElementById("zvukovaStopa");
 
 function prehraj() {
 
-    let audioFile = document.getElementById("zvukovaStopa");
     audioFile.play();
 }
 
 function zastav() {
 
-    let audioFile = document.getElementById("zvukovaStopa");
-   audioFile.pause();
+    audioFile.pause();
 }
 
 function min() {
 
-    let audioFile = document.getElementById("zvukovaStopa")
-    audioFile.volume = 0;
+       audioFile.volume = 0;
     
   }
 
   function stred() {
 
-    let audioFile = document.getElementById("zvukovaStopa")
     audioFile.volume = 0.5;
     
   }
   function max() {
 
-    let audioFile = document.getElementById("zvukovaStopa")
     audioFile.volume = 1;
     
   }
 
   function vratSe() {
 
-    let audioFile = document.getElementById("zvukovaStopa")
     audioFile.currentTime = 0;
     
   }
